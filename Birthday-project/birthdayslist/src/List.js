@@ -16,7 +16,7 @@ function List({ persons }) {
             <img
               src={image}
               alt="name"
-              className="my-2 w-6/12 sm:w-4/12 px-4 shadow rounded-full max-w-full h-auto align-middle border-none"
+              className="my-2 px-4 rounded-full sm:w-4/12 h-auto"
             />
             <div className="flex-space">
               <p className="text-stone-950 font-bold">{Name}</p>
