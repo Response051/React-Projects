@@ -1,4 +1,10 @@
 import React from "react";
+/* *
+1. destructure the persons object and map it out
+2. return the individual parts of the data on the UI
+3. ADD individual classes
+*
+*/
 
 function List({ persons }) {
   return (
@@ -10,7 +16,7 @@ function List({ persons }) {
             <img
               src={image}
               alt="name"
-              className="img my-2 w-6/12 sm:w-4/12 px-4 shadow rounded-full max-w-full h-auto align-middle border-none"
+              className="my-2 w-6/12 sm:w-4/12 px-4 shadow rounded-full max-w-full h-auto align-middle border-none"
             />
             <div className="flex-space">
               <p className="text-stone-950 font-bold">{Name}</p>
