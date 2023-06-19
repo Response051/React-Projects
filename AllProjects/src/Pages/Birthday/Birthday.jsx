@@ -9,20 +9,25 @@ function Birthday() {
     setPeople([]);
   }
   return (
-    <section className="box-border block container">
-      <div className="m-5 flex justify-center items-center flex-col">
-        <p className="my-5 ">{people.length} is Remaining</p>
+    <section className="box-border overflow-x-hidden bg-pink-600">
+      <div className="m-5 flex justify-center  flex-col sm:mx-96">
+        <p className="my-5 text-center text-3xl">
+          {people.length} is Remaining
+        </p>
         {people.map((persons) => {
           // distructure the Birthday data
           const { id, gender, image, full_name, email } = persons;
           // return the data below
           return (
-            <div key={id} className="flex justify-between items-center">
-              <div>
+            <div
+              key={id}
+              className="flex  items-center border-2 bg-white px-5 py-5 "
+            >
+              <div className="my-4">
                 {" "}
                 <img src={image} className="w-20 h-20 rounded-full "></img>
               </div>
-              <div>
+              <div className="relative left-10 text-xl">
                 <h2>{full_name}</h2>
                 <p>{gender}</p>
                 <p>{email}</p>
@@ -30,13 +35,13 @@ function Birthday() {
             </div>
           );
         })}
-        <div onClick={handleClick}>
+        <div onClick={handleClick} className="my-5 text-2xl">
           {" "}
           <Button props="Clear Me" />
         </div>
 
         <Link to="/">
-          <button className="">Go back To LandingPage</button>
+          <button className="my-5 text-3xl">Go back To LandingPage</button>
         </Link>
       </div>
     </section>

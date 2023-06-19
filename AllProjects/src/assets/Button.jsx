@@ -1,7 +1,9 @@
 function Button({ props }) {
   return (
     <div>
-      <button className="bg-red-300 border-s-zinc-700 border-2">{props}</button>
+      <button className="bg-pink-300   px-20 py-1">
+        {props}
+      </button>
     </div>
   );
 }
