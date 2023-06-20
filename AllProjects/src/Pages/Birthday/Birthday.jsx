@@ -21,13 +21,13 @@ function Birthday() {
           return (
             <div
               key={id}
-              className="flex  items-center border-2 bg-white px-5 py-5 "
+              className="sm:flex  items-center  border-2 bg-white px-5 py-5 "
             >
-              <div className="my-4">
+              <div className="my-4 flex justify-center">
                 {" "}
                 <img src={image} className="w-20 h-20 rounded-full "></img>
               </div>
-              <div className="relative left-10 text-xl">
+              <div className="sm:relative sm:left-10 text-xl break-words text-center sm:text-left">
                 <h2>{full_name}</h2>
                 <p>{gender}</p>
                 <p>{email}</p>
