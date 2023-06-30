@@ -1,19 +1,22 @@
 import { useState } from "react";
 import Loading from "./Loading";
 import Tours from "./Tours";
+import Data from "./../../assets/ToursData.json";
 
 function MainApp() {
-  const [loading, setLoading] = useState();
-  const [tours, setTours] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [tours, setTours] = useState(Data);
+
   if (loading) {
     return (
       <main>
         <Loading />
       </main>
     );
-  }return (
+  }
+  return (
     <main>
-      <Tours />
+      <Tours tours={tours} />
     </main>
   );
 }
