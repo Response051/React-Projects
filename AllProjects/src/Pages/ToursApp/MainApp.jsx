@@ -6,18 +6,18 @@ import Data from "./../../assets/ToursData.json";
 function MainApp() {
   const [loading, setLoading] = useState(false);
   const [tours, setTours] = useState(Data);
-
-  if (loading) {
-    return (
-      <main>
-        <Loading />
-      </main>
-    );
-  }
   return (
-    <main>
-      <Tours tours={tours} />
-    </main>
+    <div>
+      {loading ? (
+        <main>
+          <Loading />
+        </main>
+      ) : (
+        <main>
+          <Tours tours={tours} />
+        </main>
+      )}
+    </div>
   );
 }
 

@@ -4,10 +4,11 @@ import Loading from "./Loading";
 function Tours({ tours }) {
   return (
     <div>
-      Tours
+      <p>Tours</p>
+
       <div>
         {tours.map((tour) => {
-          return <Loading key={tour.id} {...tour}></Loading>
+          return <Loading key={tour.id} {...tour}></Loading>;
         })}
       </div>
       <Link to="/">
