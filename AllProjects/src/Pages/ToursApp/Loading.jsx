@@ -5,23 +5,34 @@ function Loading({ id, name, image, description, price, removeTours }) {
 
   return (
     <div key={id}>
-      <div>
-        <img src={image} alt={name} />
+      <div className="mb-6 md:mx-48">
+        <img
+          src={image}
+          alt={name}
+          className="w-full bg-cover bg-center h-1/2"
+        />
         {/* this conditional rendering below helps to either minimize or maximise the total wording on the descrpition */}
-        <article>
+        <article className="my-4 font-serif text-md">
           {readMore ? description : `${description.substring(0, 300)}...`}
           <button
             onClick={() => SetReadmore(!readMore)}
-            className="mx-2 text-sm text-blue-500 bold cursor-pointer"
+            className="mx-2 text-md text-blue-700 bg-yellow-50 px-2 bold cursor-pointer"
           >
             {readMore ? "Show Less" : "Show More"}
           </button>
         </article>
-        <div>
-          <p>{name}</p>
-          <p>{price}</p>
+        <div className="flex justify-between my-6">
+          <p className="text-md font-mono">{name}</p>
+          <p className="border-1 bg-slate-200 px-2 py-1">{price}</p>
         </div>
-        <button onClick={() => removeTours(id)}>Not Interested</button>
+        <div className="my-6 mb-14 flex justify-center items-center">
+          <button
+            onClick={() => removeTours(id)}
+            className="bg-blue-500 text-xs md:text-lg cursor-pointer text-gray-50 px-10 py-1"
+          >
+            Not Interested
+          </button>
+        </div>{" "}
       </div>
     </div>
   );
