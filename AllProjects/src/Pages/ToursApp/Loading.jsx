@@ -1,13 +1,7 @@
 import { useState } from "react";
 
-function Loading({ id, name, image, description, price }) {
+function Loading({ id, name, image, description, price, removeTours }) {
   const [readMore, SetReadmore] = useState(false);
-  const [close, SetClose] = useState(false)
-  const Handleclick = () => {
-    if (close === id) {
-      return null;
-    }
-  };
 
   return (
     <div key={id}>
@@ -27,7 +21,7 @@ function Loading({ id, name, image, description, price }) {
           <p>{name}</p>
           <p>{price}</p>
         </div>
-        <button onClick={Handleclick}>clear</button>
+        <button onClick={() => removeTours(id)}>Not Interested</button>
       </div>
     </div>
   );

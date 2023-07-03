@@ -7,6 +7,8 @@ function LandingPage() {
       <Link to="/TodoPage">To-Do-Page</Link>
       <br />
       <Link to="/BirthdayPage">BirthdayPage</Link>
+      <br />
+      <Link to="/ToursPage">ToursPage</Link>
     </div>
   );
 }
