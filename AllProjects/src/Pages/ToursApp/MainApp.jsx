@@ -1,5 +1,6 @@
 import { useState } from "react";
-import Loading from "./Loading";
+
+import NoTour from "./NoTour";
 import Tours from "./Tours";
 import Data from "./../../assets/ToursData.json";
 
@@ -15,9 +16,7 @@ function MainApp() {
   if (tours.length === 0) {
     return (
       <main>
-        <p>No tours Left</p>
-
-        <button onClick={setTours(tours)}>Refresh Tour</button>
+        <NoTour tours={tours} setTours={setTours()} />
       </main>
     );
   }
