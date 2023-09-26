@@ -2,7 +2,7 @@ import { logo } from "../assets";
 
 function Hero() {
   return (
-    <header className=" flex w-full justify-center items-center flex-col">
+    <header className=" flex w-full justify-center items-center flex-col mt-10">
       <nav className="flex justify-around items-center w-full mb-10 pt-1 ">
         <img src={logo} className="object-contain w-28" />
         <button
@@ -20,7 +20,7 @@ function Hero() {
           <br className="lg:hidden" /> OpenAI GPT-4
         </span>
       </h1>
-      <p className="text=3xl text-blue-700 font-medium w-full text-center mt-4">
+      <p className="text=3xl text-green-700 font-medium w-full flex flex-wrap text-center mt-4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem culpa,
         voluptatem ad delectus cumque libero asperiores aut fugit? Facere eos
         commodi, et impedit pariatur reiciendis! Fugiat quo soluta culpa minus?
