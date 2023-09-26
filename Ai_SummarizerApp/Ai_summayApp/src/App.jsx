@@ -1,17 +1,15 @@
-
 import Hero from "./component/Hero";
 import Demo from "./component/Demo";
 
 function App() {
   return (
-    <main>
+    <main className="w-full">
       <div className="via-yellow-900">
-        
         <div className="gradient"></div>
       </div>
       <div className="">
-        <Demo />
         <Hero />
+        <Demo />
       </div>
     </main>
   );
